@@ -6,6 +6,7 @@ module bridge_fsm (
     input  wire [31:0] ahb_addr,
     input  wire        ahb_write,
     input  wire [2:0]  ahb_size,
+    input  wire [2:0]  ahb_burst,
     input  wire [31:0] ahb_wdata,
     input  wire        ahb_valid,
 
@@ -35,6 +36,7 @@ localparam S_COMPLETE = 2'd3;
 reg [1:0]  state;
 reg [31:0] addr_reg, wdata_reg, rdata_reg;
 reg        write_reg;
+reg [2:0]  burst_reg;
 reg [3:0]  wstrb_reg;
 reg [1:0]  resp_reg;
 
@@ -93,6 +95,7 @@ always @(posedge HCLK or negedge HRESETn) begin
                     wdata_reg <= ahb_wdata;
                     write_reg <= ahb_write;
                     wstrb_reg <= calc_wstrb(ahb_addr, ahb_size);
+                    burst_reg <= ahb_burst;
                     state     <= S_ISSUE;
                 end
             end
