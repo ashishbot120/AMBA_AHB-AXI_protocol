@@ -1,0 +1,61 @@
+# Simulation outputs — never commit these
+*.vcd
+*.lxt
+*.fst
+*.ghw
+
+# Compiled simulation binaries
+bridge_sim
+*.out
+*.exe
+a.out
+
+# Icarus Verilog intermediate files
+*.vvp
+
+# Vivado project files — too large, regeneratable
+*.xpr
+*.bit
+*.bin
+*.ltx
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.srcs/impl*/
+*.srcs/synth*/
+*.jou
+*.log
+*.str
+*.mcs
+
+# Synopsys / Cadence tool files
+*.svf
+*.ddc
+*.syn
+*.mr
+*.pvl
+*.syn
+DVEfiles/
+csrc/
+simv
+simv.daidir/
+urgReport/
+*.fsdb
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python cache (if any scripts added later)
+__pycache__/
+*.pyc
