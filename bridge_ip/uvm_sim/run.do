@@ -21,7 +21,7 @@ vlog -work work ../rtl/bridge_top.v
 # -------------------------------------------------------
 # Compile UVM testbench (SystemVerilog)
 # -------------------------------------------------------
-vlog -work work -sv \
+vlog -work work -sv -L uvm_lib \
     +incdir+../uvm/interfaces \
     +incdir+../uvm/seq_items \
     +incdir+../uvm/agents \
