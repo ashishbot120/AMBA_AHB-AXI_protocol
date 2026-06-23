@@ -1,22 +1,6 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
 
-`include "ahb_transaction.sv"
-`include "axi_transaction.sv"
-`include "ahb_driver.sv"
-`include "ahb_monitor.sv"
-`include "ahb_sequencer.sv"
-`include "ahb_agent.sv"
-`include "axi_monitor.sv"
-`include "axi_write_responder.sv"
-`include "axi_read_responder.sv"
-`include "axi_agent.sv"
-`include "scoreboard.sv"
-`include "bridge_env.sv"
-`include "ahb_basic_seq.sv"
-`include "axi_response_seq.sv"
-`include "bridge_base_test.sv"
-
 module tb_top_uvm;
 
     logic HCLK;

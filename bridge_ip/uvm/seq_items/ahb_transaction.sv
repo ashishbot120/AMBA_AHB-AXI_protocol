@@ -16,8 +16,11 @@ class ahb_transaction extends uvm_sequence_item;
     // Constraints
     constraint valid_size  { size  inside {3'b000, 3'b001, 3'b010}; }
     constraint valid_burst { burst inside {3'b000, 3'b011, 3'b101}; }
-    constraint addr_align  { size == 3'b010 → addr[1:0] == 2'b00;
-                             size == 3'b001 → addr[0]   == 1'b0; }
+// WITH THIS (plain ASCII ->):
+    constraint addr_align  {
+        (size == 3'b010) -> (addr[1:0] == 2'b00);
+        (size == 3'b001) -> (addr[0]   == 1'b0);
+    }
 
     function new(string name = "ahb_transaction");
         super.new(name);
