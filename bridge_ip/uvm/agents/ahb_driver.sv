@@ -1,3 +1,5 @@
+`include "uvm_macros.svh"
+import uvm_pkg::*;
 class ahb_driver extends uvm_driver #(ahb_transaction);
     `uvm_component_utils(ahb_driver)
 

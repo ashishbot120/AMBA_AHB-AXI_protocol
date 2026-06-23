@@ -1,3 +1,7 @@
+
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+
 class axi_write_responder extends uvm_driver #(axi_transaction);
     `uvm_component_utils(axi_write_responder)
 

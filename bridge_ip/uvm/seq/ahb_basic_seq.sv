@@ -1,3 +1,5 @@
+`include "uvm_macros.svh"
+import uvm_pkg::*;
 class ahb_basic_seq extends uvm_sequence #(ahb_transaction);
     `uvm_object_utils(ahb_basic_seq)
 

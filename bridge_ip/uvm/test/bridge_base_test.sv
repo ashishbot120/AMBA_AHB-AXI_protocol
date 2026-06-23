@@ -1,3 +1,7 @@
+
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+
 class bridge_base_test extends uvm_test;
     `uvm_component_utils(bridge_base_test)
 

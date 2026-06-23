@@ -1,0 +1,172 @@
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do run.do
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# Copying C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 18:00:10 on Jun 23,2026
+# vlog -reportprogress 300 -work work ../rtl/ahb_slave.v 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module ahb_slave
+# 
+# Top level modules:
+# 	ahb_slave
+# End time: 18:00:10 on Jun 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 18:00:11 on Jun 23,2026
+# vlog -reportprogress 300 -work work ../rtl/bridge_fsm.v 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module bridge_fsm
+# 
+# Top level modules:
+# 	bridge_fsm
+# End time: 18:00:11 on Jun 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 18:00:11 on Jun 23,2026
+# vlog -reportprogress 300 -work work ../rtl/axi_master.v 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module axi_master
+# 
+# Top level modules:
+# 	axi_master
+# End time: 18:00:11 on Jun 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 18:00:11 on Jun 23,2026
+# vlog -reportprogress 300 -work work ../rtl/bridge_top.v 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module bridge_top
+# 
+# Top level modules:
+# 	bridge_top
+# End time: 18:00:11 on Jun 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 18:00:11 on Jun 23,2026
+# vlog -reportprogress 300 -work work -sv "+incdir+../uvm/interfaces" "+incdir+../uvm/seq_items" "+incdir+../uvm/agents" "+incdir+../uvm/env" "+incdir+../uvm/seq" "+incdir+../uvm/test" ../uvm/interfaces/ahb_if.sv ../uvm/interfaces/axi_if.sv ../uvm/seq_items/ahb_transaction.sv ../uvm/seq_items/axi_transaction.sv ../uvm/agents/ahb_driver.sv ../uvm/agents/ahb_monitor.sv ../uvm/agents/ahb_sequencer.sv ../uvm/agents/ahb_agent.sv ../uvm/agents/axi_monitor.sv ../uvm/agents/axi_write_responder.sv ../uvm/agents/axi_read_responder.sv ../uvm/agents/axi_agent.sv ../uvm/env/scoreboard.sv ../uvm/env/bridge_env.sv ../uvm/seq/ahb_basic_seq.sv ../uvm/seq/axi_response_seq.sv ../uvm/test/bridge_base_test.sv ../uvm/tb_top_uvm.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling interface ahb_if
+# -- Compiling interface axi_if
+# ** Error: (vlog-13069) ../uvm/seq_items/ahb_transaction.sv(2): near "uvm_sequence_item": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/seq_items/ahb_transaction.sv(2): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/seq_items/axi_transaction.sv(1): near "uvm_sequence_item": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/seq_items/axi_transaction.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/agents/ahb_driver.sv(1): near "uvm_driver": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/agents/ahb_driver.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/agents/ahb_monitor.sv(1): near "uvm_monitor": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/agents/ahb_monitor.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/agents/ahb_sequencer.sv(1): near "uvm_sequencer": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/agents/ahb_sequencer.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/agents/ahb_agent.sv(1): near "uvm_agent": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/agents/ahb_agent.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/agents/axi_monitor.sv(1): near "uvm_monitor": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/agents/axi_monitor.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/agents/axi_write_responder.sv(1): near "uvm_driver": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/agents/axi_write_responder.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/agents/axi_read_responder.sv(1): near "uvm_driver": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/agents/axi_read_responder.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/agents/axi_agent.sv(1): near "uvm_agent": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/agents/axi_agent.sv(1): Error in class extension specification.
+# ** Error: ../uvm/env/scoreboard.sv(1): (vlog-2163) Macro `uvm_analysis_imp_decl is undefined.
+# ** Error: (vlog-13069) ../uvm/env/scoreboard.sv(1): near "(": syntax error, unexpected '('.
+# ** Error: (vlog-13069) ../uvm/env/bridge_env.sv(1): near "uvm_env": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/env/bridge_env.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/seq/ahb_basic_seq.sv(1): near "uvm_sequence": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/seq/ahb_basic_seq.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/seq/axi_response_seq.sv(1): near "uvm_sequence": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/seq/axi_response_seq.sv(1): Error in class extension specification.
+# ** Error: (vlog-13069) ../uvm/test/bridge_base_test.sv(1): near "uvm_test": syntax error, unexpected IDENTIFIER.
+# ** Error: ../uvm/test/bridge_base_test.sv(1): Error in class extension specification.
+# ** Note: (vlog-2286) ../uvm/tb_top_uvm.sv(1): Using implicit +incdir+C:/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(4)
+# ** at ../uvm/seq_items/ahb_transaction.sv(2): (vlog-2426) Typedef 'ahb_transaction' multiply defined. Previous definition found at '../uvm/seq_items/ahb_transaction.sv(2)'.
+# ** Error: (vlog-13067) ../uvm/seq_items/ahb_transaction.sv(17:44): Syntax error, unexpected non-printable character with the hex value '0xe2'.
+# ** Error: (vlog-13067) ../uvm/seq_items/ahb_transaction.sv(17:45): Syntax error, unexpected non-printable character with the hex value '0x86'.
+# ** Error: (vlog-13067) ../uvm/seq_items/ahb_transaction.sv(17:46): Syntax error, unexpected non-printable character with the hex value '0x92'.
+# ** Error: (vlog-13069) ** while parsing file included at ../uvm/tb_top_uvm.sv(4)
+# ** at ../uvm/seq_items/ahb_transaction.sv(17): near "addr": syntax error, unexpected IDENTIFIER.
+# ** Error: (vlog-13067) ../uvm/seq_items/ahb_transaction.sv(18:44): Syntax error, unexpected non-printable character with the hex value '0xe2'.
+# ** Error: (vlog-13067) ../uvm/seq_items/ahb_transaction.sv(18:45): Syntax error, unexpected non-printable character with the hex value '0x86'.
+# ** Error: (vlog-13067) ../uvm/seq_items/ahb_transaction.sv(18:46): Syntax error, unexpected non-printable character with the hex value '0x92'.
+# ** Error: (vlog-13069) ** while parsing file included at ../uvm/tb_top_uvm.sv(4)
+# ** at ../uvm/seq_items/ahb_transaction.sv(18): near "addr": syntax error, unexpected IDENTIFIER.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(5)
+# ** at ../uvm/seq_items/axi_transaction.sv(1): (vlog-2426) Typedef 'axi_transaction' multiply defined. Previous definition found at '../uvm/seq_items/axi_transaction.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(6)
+# ** at ../uvm/agents/ahb_driver.sv(1): (vlog-2426) Typedef 'ahb_driver' multiply defined. Previous definition found at '../uvm/agents/ahb_driver.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(7)
+# ** at ../uvm/agents/ahb_monitor.sv(1): (vlog-2426) Typedef 'ahb_monitor' multiply defined. Previous definition found at '../uvm/agents/ahb_monitor.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(7)
+# ** at ../uvm/agents/ahb_monitor.sv(30): (vlog-13530) Failed to find the name 'type_id' in scope 'ahb_transaction' at ../uvm/seq_items/ahb_transaction.sv(2).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(8)
+# ** at ../uvm/agents/ahb_sequencer.sv(1): (vlog-2426) Typedef 'ahb_sequencer' multiply defined. Previous definition found at '../uvm/agents/ahb_sequencer.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(9)
+# ** at ../uvm/agents/ahb_agent.sv(1): (vlog-2426) Typedef 'ahb_agent' multiply defined. Previous definition found at '../uvm/agents/ahb_agent.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(9)
+# ** at ../uvm/agents/ahb_agent.sv(15): (vlog-13530) Failed to find the name 'type_id' in scope 'ahb_monitor' at ../uvm/agents/ahb_monitor.sv(1).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(10)
+# ** at ../uvm/agents/axi_monitor.sv(1): (vlog-2426) Typedef 'axi_monitor' multiply defined. Previous definition found at '../uvm/agents/axi_monitor.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(10)
+# ** at ../uvm/agents/axi_monitor.sv(56): (vlog-13530) Failed to find the name 'type_id' in scope 'axi_transaction' at ../uvm/seq_items/axi_transaction.sv(1).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(10)
+# ** at ../uvm/agents/axi_monitor.sv(81): (vlog-13530) Failed to find the name 'type_id' in scope 'axi_transaction' at ../uvm/seq_items/axi_transaction.sv(1).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(11)
+# ** at ../uvm/agents/axi_write_responder.sv(1): (vlog-2426) Typedef 'axi_write_responder' multiply defined. Previous definition found at '../uvm/agents/axi_write_responder.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(12)
+# ** at ../uvm/agents/axi_read_responder.sv(1): (vlog-2426) Typedef 'axi_read_responder' multiply defined. Previous definition found at '../uvm/agents/axi_read_responder.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(13)
+# ** at ../uvm/agents/axi_agent.sv(1): (vlog-2426) Typedef 'axi_agent' multiply defined. Previous definition found at '../uvm/agents/axi_agent.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(13)
+# ** at ../uvm/agents/axi_agent.sv(17): (vlog-13530) Failed to find the name 'type_id' in scope 'axi_monitor' at ../uvm/agents/axi_monitor.sv(1).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(15)
+# ** at ../uvm/env/bridge_env.sv(1): (vlog-2426) Typedef 'bridge_env' multiply defined. Previous definition found at '../uvm/env/bridge_env.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(15)
+# ** at ../uvm/env/bridge_env.sv(15): (vlog-13530) Failed to find the name 'type_id' in scope 'ahb_agent' at ../uvm/agents/ahb_agent.sv(1).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(15)
+# ** at ../uvm/env/bridge_env.sv(16): (vlog-13530) Failed to find the name 'type_id' in scope 'axi_agent' at ../uvm/agents/axi_agent.sv(1).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(16)
+# ** at ../uvm/seq/ahb_basic_seq.sv(1): (vlog-2426) Typedef 'ahb_basic_seq' multiply defined. Previous definition found at '../uvm/seq/ahb_basic_seq.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(16)
+# ** at ../uvm/seq/ahb_basic_seq.sv(12): (vlog-13530) Failed to find the name 'type_id' in scope 'ahb_transaction' at ../uvm/seq_items/ahb_transaction.sv(2).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(16)
+# ** at ../uvm/seq/ahb_basic_seq.sv(21): (vlog-13530) Failed to find the name 'type_id' in scope 'ahb_transaction' at ../uvm/seq_items/ahb_transaction.sv(2).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(16)
+# ** at ../uvm/seq/ahb_basic_seq.sv(30): (vlog-13530) Failed to find the name 'type_id' in scope 'ahb_transaction' at ../uvm/seq_items/ahb_transaction.sv(2).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(17)
+# ** at ../uvm/seq/axi_response_seq.sv(1): (vlog-2426) Typedef 'axi_response_seq' multiply defined. Previous definition found at '../uvm/seq/axi_response_seq.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(17)
+# ** at ../uvm/seq/axi_response_seq.sv(18): (vlog-13530) Failed to find the name 'type_id' in scope 'axi_transaction' at ../uvm/seq_items/axi_transaction.sv(1).
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(18)
+# ** at ../uvm/test/bridge_base_test.sv(1): (vlog-2426) Typedef 'bridge_base_test' multiply defined. Previous definition found at '../uvm/test/bridge_base_test.sv(1)'.
+# ** Error: ** while parsing file included at ../uvm/tb_top_uvm.sv(18)
+# ** at ../uvm/test/bridge_base_test.sv(12): (vlog-13530) Failed to find the name 'type_id' in scope 'bridge_env' at ../uvm/env/bridge_env.sv(1).
+# End time: 18:00:12 on Jun 23,2026, Elapsed time: 0:00:01
+# Errors: 64, Warnings: 0
+# ** Error: C:/altera_lite/25.1std/questa_fse/win64/vlog failed.
+# Error in macro ./run.do line 48
+# C:/altera_lite/25.1std/questa_fse/win64/vlog failed.
+#     while executing
+# "vlog -work work -sv \
+#     +incdir+../uvm/interfaces \
+#     +incdir+../uvm/seq_items \
+#     +incdir+../uvm/agents \
+#     +incdir+../uvm/env \
+#     +incdir+..."

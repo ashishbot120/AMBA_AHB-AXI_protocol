@@ -1,3 +1,6 @@
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+
 `uvm_analysis_imp_decl(_ahb)
 `uvm_analysis_imp_decl(_axi)
 
