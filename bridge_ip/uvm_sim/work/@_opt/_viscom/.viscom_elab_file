@@ -1,0 +1,1 @@
+C:/altera_lite/25.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 81936816 work.tb_top_uvm -quiet -auto_acc_if_foreign -work work -L uvm_lib -allow_unnamed -o _opt -id 1-74d4dd695894-6a3baa0d-3cc-b3dc

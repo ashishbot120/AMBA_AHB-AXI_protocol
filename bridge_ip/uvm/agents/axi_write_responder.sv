@@ -1,11 +1,12 @@
-
-`include "uvm_macros.svh"
-import uvm_pkg::*;
-
-class axi_write_responder extends uvm_driver #(axi_transaction);
+class axi_write_responder extends uvm_component;
     `uvm_component_utils(axi_write_responder)
 
     virtual axi_if.SLAVE vif;
+
+    // Set this from the test to inject errors
+    // -1 = never error, N = error on Nth write
+    int error_on_txn = -1;
+    int txn_count    = 0;
 
     function new(string name = "axi_write_responder", uvm_component parent = null);
         super.new(name, parent);
@@ -14,7 +15,7 @@ class axi_write_responder extends uvm_driver #(axi_transaction);
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         if (!uvm_config_db#(virtual axi_if.SLAVE)::get(this, "", "vif", vif))
-            `uvm_fatal("AXI_WR_RESP", "Virtual interface not found in config_db")
+            `uvm_fatal("AXI_WR_RESP", "Virtual interface not found")
     endfunction
 
     task run_phase(uvm_phase phase);
@@ -24,18 +25,15 @@ class axi_write_responder extends uvm_driver #(axi_transaction);
         vif.slv_cb.BRESP   <= 2'b00;
 
         wait (vif.ARESETn == 1'b1);
+        @(vif.slv_cb);
 
         forever begin
-            axi_transaction tr;
-
-            // Wait for a write address to appear
-            @(vif.slv_cb);
-            wait (vif.slv_cb.AWVALID);
-
-            // Ask the sequence what response to send for this write
-            seq_item_port.get_next_item(tr);
+            logic [1:0] resp;
+            txn_count++;
+            resp = (txn_count == error_on_txn) ? 2'b10 : 2'b00;
 
             // Accept AW
+            wait (vif.slv_cb.AWVALID);
             vif.slv_cb.AWREADY <= 1'b1;
             @(vif.slv_cb);
             vif.slv_cb.AWREADY <= 1'b0;
@@ -46,14 +44,13 @@ class axi_write_responder extends uvm_driver #(axi_transaction);
             @(vif.slv_cb);
             vif.slv_cb.WREADY <= 1'b0;
 
-            // Drive write response
+            // Send response
             wait (vif.slv_cb.BREADY);
             vif.slv_cb.BVALID <= 1'b1;
-            vif.slv_cb.BRESP  <= tr.resp;
+            vif.slv_cb.BRESP  <= resp;
             @(vif.slv_cb);
             vif.slv_cb.BVALID <= 1'b0;
-
-            seq_item_port.item_done();
+            @(vif.slv_cb);
         end
     endtask
 

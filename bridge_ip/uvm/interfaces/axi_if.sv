@@ -24,13 +24,13 @@ interface axi_if (input logic ACLK, input logic ARESETn);
     logic        RVALID;
     logic        RREADY;
 
-    // Slave-side clocking block — drives READY/response signals,
-    // samples the master-driven address/data signals.
-    // Will be used by the AXI slave responder we write next.
+    // Slave-side clocking block
     clocking slv_cb @(posedge ACLK);
         input  AWADDR, AWPROT, AWVALID, WDATA, WSTRB, WVALID,
                ARADDR, ARPROT, ARVALID, BREADY, RREADY;
-        output AWREADY, WREADY, BRESP, BVALID, RDATA, RRESP, RVALID;
+        output AWREADY, WREADY, BRESP, BVALID,
+               ARREADY,              // <-- ADD THIS
+               RDATA, RRESP, RVALID;
     endclocking
 
     // Monitor clocking block — fully passive

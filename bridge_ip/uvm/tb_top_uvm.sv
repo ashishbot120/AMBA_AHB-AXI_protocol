@@ -1,5 +1,6 @@
 `include "uvm_macros.svh"
 import uvm_pkg::*;
+import bridge_pkg::*;
 
 module tb_top_uvm;
 

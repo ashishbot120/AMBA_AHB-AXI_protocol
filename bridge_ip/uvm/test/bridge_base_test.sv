@@ -1,7 +1,3 @@
-
-`include "uvm_macros.svh"
-import uvm_pkg::*;
-
 class bridge_base_test extends uvm_test;
     `uvm_component_utils(bridge_base_test)
 
@@ -16,32 +12,28 @@ class bridge_base_test extends uvm_test;
         env = bridge_env::type_id::create("env", this);
     endfunction
 
-    task run_phase(uvm_phase phase);
-        ahb_basic_seq    ahb_seq;
-        axi_response_seq wr_resp_seq;
-        axi_response_seq rd_resp_seq;
+    function void start_of_simulation_phase(uvm_phase phase);
+        // Set error injection before simulation starts
+        env.axi_agt.write_responder.error_on_txn = 2;
+    endfunction
 
+    task run_phase(uvm_phase phase);
+        ahb_basic_seq ahb_seq;
+        uvm_objection obj;
+
+        obj = phase.get_objection();
+        obj.set_drain_time(this, 300ns);
         phase.raise_objection(this);
 
-        // Background AXI responders must be alive before AHB stimulus starts
-        wr_resp_seq = axi_response_seq::type_id::create("wr_resp_seq");
-        wr_resp_seq.error_on_txn = 2;   // SLVERR on 2nd write — recreates Test 3
-        fork
-            wr_resp_seq.start(env.axi_agt.write_seqr);
-        join_none
+        // Small delay for responders to initialise
+        #50;
 
-        rd_resp_seq = axi_response_seq::type_id::create("rd_resp_seq");
-        fork
-            rd_resp_seq.start(env.axi_agt.read_seqr);
-        join_none
-
-        #10;  // let responders settle before driving stimulus
-
-        // Drive the actual directed test scenarios
+        // Drive all 3 test scenarios
         ahb_seq = ahb_basic_seq::type_id::create("ahb_seq");
         ahb_seq.start(env.ahb_agt.sequencer);
 
-        #100; // allow final response to fully propagate before ending
+        // Wait for all 3 AXI transactions to complete
+        #500;
 
         phase.drop_objection(this);
     endtask

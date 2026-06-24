@@ -1,5 +1,4 @@
-`include "uvm_macros.svh"
-import uvm_pkg::*;
+
 class ahb_driver extends uvm_driver #(ahb_transaction);
     `uvm_component_utils(ahb_driver)
 
@@ -35,30 +34,36 @@ class ahb_driver extends uvm_driver #(ahb_transaction);
         end
     endtask
 
-    task drive_transfer(ahb_transaction tr);
-        // --- Address phase ---
+task drive_transfer(ahb_transaction tr);
+    // --- Address phase ---
+    @(vif.drv_cb);
+    vif.drv_cb.HSEL   <= 1'b1;
+    vif.drv_cb.HADDR  <= tr.addr;
+    vif.drv_cb.HTRANS <= 2'b10;
+    vif.drv_cb.HWRITE <= tr.write;
+    vif.drv_cb.HSIZE  <= tr.size;
+    vif.drv_cb.HBURST <= tr.burst;
+
+    // --- Move to data phase (1 clock after address) ---
+    @(vif.drv_cb);
+    vif.drv_cb.HWDATA <= tr.data;
+    vif.drv_cb.HTRANS <= 2'b00;
+    vif.drv_cb.HSEL   <= 1'b0;
+
+    // --- Wait 1 extra clock for bridge to react and pull HREADY LOW ---
+    @(vif.drv_cb);
+
+    // --- Now wait for HREADY LOW (bridge busy) ---
+    while (vif.drv_cb.HREADY == 1'b1)
         @(vif.drv_cb);
-        vif.drv_cb.HSEL   <= 1'b1;
-        vif.drv_cb.HADDR  <= tr.addr;
-        vif.drv_cb.HTRANS <= 2'b10;     // NONSEQ
-        vif.drv_cb.HWRITE <= tr.write;
-        vif.drv_cb.HSIZE  <= tr.size;
-        vif.drv_cb.HBURST <= tr.burst;
 
-        // --- Data phase ---
-        @(vif.drv_cb);
-        vif.drv_cb.HWDATA <= tr.data;
-        vif.drv_cb.HTRANS <= 2'b00;     // IDLE — single transfer only
-        vif.drv_cb.HSEL   <= 1'b0;
-
-        // --- Wait for completion ---
-        wait (vif.drv_cb.HREADY == 1'b1);
+    // --- Wait for HREADY HIGH (bridge done) ---
+    while (vif.drv_cb.HREADY == 1'b0)
         @(vif.drv_cb);
 
-        // Capture response into the transaction for the scoreboard
-        tr.rdata = vif.drv_cb.HRDATA;
-        tr.resp  = vif.drv_cb.HRESP;
-
-    endtask
+    // --- Capture response ---
+    tr.rdata = vif.drv_cb.HRDATA;
+    tr.resp  = vif.drv_cb.HRESP;
+endtask
 
 endclass

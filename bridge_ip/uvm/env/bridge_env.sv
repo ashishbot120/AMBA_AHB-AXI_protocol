@@ -1,7 +1,4 @@
 
-`include "uvm_macros.svh"
-import uvm_pkg::*;
-
 class bridge_env extends uvm_env;
     `uvm_component_utils(bridge_env)
 

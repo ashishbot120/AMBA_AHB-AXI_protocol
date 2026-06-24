@@ -1,5 +1,4 @@
-`include "uvm_macros.svh"
-import uvm_pkg::*;
+
 class axi_response_seq extends uvm_sequence #(axi_transaction);
     `uvm_object_utils(axi_response_seq)
 

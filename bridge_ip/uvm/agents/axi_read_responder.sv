@@ -1,8 +1,4 @@
-
-`include "uvm_macros.svh"
-import uvm_pkg::*;
-
-class axi_read_responder extends uvm_driver #(axi_transaction);
+class axi_read_responder extends uvm_component;
     `uvm_component_utils(axi_read_responder)
 
     virtual axi_if.SLAVE vif;
@@ -14,38 +10,33 @@ class axi_read_responder extends uvm_driver #(axi_transaction);
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
         if (!uvm_config_db#(virtual axi_if.SLAVE)::get(this, "", "vif", vif))
-            `uvm_fatal("AXI_RD_RESP", "Virtual interface not found in config_db")
+            `uvm_fatal("AXI_RD_RESP", "Virtual interface not found")
     endfunction
 
     task run_phase(uvm_phase phase);
         vif.slv_cb.ARREADY <= 1'b0;
         vif.slv_cb.RVALID  <= 1'b0;
-        vif.slv_cb.RDATA   <= 32'b0;
+        vif.slv_cb.RDATA   <= 32'hCAFEBABE;
         vif.slv_cb.RRESP   <= 2'b00;
 
         wait (vif.ARESETn == 1'b1);
+        @(vif.slv_cb);
 
         forever begin
-            axi_transaction tr;
-
-            @(vif.slv_cb);
+            // Accept AR
             wait (vif.slv_cb.ARVALID);
-
-            // Ask the sequence what read data + response to send back
-            seq_item_port.get_next_item(tr);
-
             vif.slv_cb.ARREADY <= 1'b1;
             @(vif.slv_cb);
             vif.slv_cb.ARREADY <= 1'b0;
 
+            // Send read data
             wait (vif.slv_cb.RREADY);
             vif.slv_cb.RVALID <= 1'b1;
-            vif.slv_cb.RDATA  <= tr.data;
-            vif.slv_cb.RRESP  <= tr.resp;
+            vif.slv_cb.RDATA  <= 32'hCAFEBABE;
+            vif.slv_cb.RRESP  <= 2'b00;
             @(vif.slv_cb);
             vif.slv_cb.RVALID <= 1'b0;
-
-            seq_item_port.item_done();
+            @(vif.slv_cb);
         end
     endtask
 

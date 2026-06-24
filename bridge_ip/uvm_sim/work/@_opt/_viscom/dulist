@@ -1,0 +1,12 @@
+1 7 uvm_pkg 4 fast 50 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/uvm_lib 0 0 26214400 0 136476 0
+1 10 bridge_pkg 4 fast 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 2988032 26214400 3241 0
+1 18 tb_top_uvm_sv_unit 4 fast 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 0 27000832 0 0
+1 6 axi_if 5 synth 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 0 0 0 0
+1 6 ahb_if 5 synth 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 0 0 0 0
+1 6 ahb_if 7 fast__2 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 0 0 271 0
+1 6 axi_if 7 fast__2 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 0 0 506 0
+1 9 ahb_slave 4 fast 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 131072 0 233 0
+1 10 bridge_fsm 4 fast 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 0 0 236 0
+1 10 axi_master 4 fast 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 0 0 248 0
+1 10 bridge_top 4 fast 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 131072 0 868 0
+1 10 tb_top_uvm 4 fast 47 C:/ashish/ahbaxiprotocol/bridge_ip/uvm_sim/work 0 0 131072 27000832 1820 0

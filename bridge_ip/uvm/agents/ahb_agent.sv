@@ -1,7 +1,4 @@
 
-`include "uvm_macros.svh"
-import uvm_pkg::*;
-
 class ahb_agent extends uvm_agent;
     `uvm_component_utils(ahb_agent)
 
