@@ -1,0 +1,16 @@
+
+State Machine - |bridge_top|axi_master:u_axi_master|state
+Name state.S_RD_ADDR state.S_WR_RESP state.S_WR_ADDR_DATA state.S_IDLE state.S_RD_DATA 
+state.S_IDLE 0 0 0 0 0 
+state.S_WR_ADDR_DATA 0 0 1 1 0 
+state.S_WR_RESP 0 1 0 1 0 
+state.S_RD_ADDR 1 0 0 1 0 
+state.S_RD_DATA 0 0 0 1 1 
+
+State Machine - |bridge_top|bridge_fsm:u_bridge_fsm|state
+Name state.S_COMPLETE state.S_WAIT state.S_ISSUE state.S_IDLE state.S_ERROR 
+state.S_IDLE 0 0 0 0 0 
+state.S_ISSUE 0 0 1 1 0 
+state.S_WAIT 0 1 0 1 0 
+state.S_COMPLETE 1 0 0 1 0 
+state.S_ERROR 0 0 0 1 1 

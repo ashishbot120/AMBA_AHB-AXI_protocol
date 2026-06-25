@@ -1,0 +1,54 @@
+# bridge_top.sdc
+# Timing constraints for AHB-to-AXI4-Lite Bridge IP
+# Target: Cyclone V 5CSEMA5F31C6
+
+# -------------------------------------------------------
+# Clock constraint — 100 MHz (10ns period)
+# -------------------------------------------------------
+create_clock -name HCLK -period 10.000 [get_ports HCLK]
+
+# -------------------------------------------------------
+# Clock uncertainty (jitter + skew)
+# -------------------------------------------------------
+derive_clock_uncertainty
+
+# -------------------------------------------------------
+# Input delays — assume inputs arrive 2ns after clock edge
+# -------------------------------------------------------
+set_input_delay -clock HCLK -max 2.000 [get_ports {
+    HSEL HADDR[*] HTRANS[*] HWRITE
+    HSIZE[*] HBURST[*] HWDATA[*]
+    AWREADY WREADY BVALID BRESP[*]
+    ARREADY RVALID RDATA[*] RRESP[*]
+    HRESETn
+}]
+
+set_input_delay -clock HCLK -min 0.500 [get_ports {
+    HSEL HADDR[*] HTRANS[*] HWRITE
+    HSIZE[*] HBURST[*] HWDATA[*]
+    AWREADY WREADY BVALID BRESP[*]
+    ARREADY RVALID RDATA[*] RRESP[*]
+    HRESETn
+}]
+
+# -------------------------------------------------------
+# Output delays — outputs must be stable 2ns before next edge
+# -------------------------------------------------------
+set_output_delay -clock HCLK -max 2.000 [get_ports {
+    HRDATA[*] HREADY HRESP[*]
+    AWADDR[*] AWPROT[*] AWVALID
+    WDATA[*] WSTRB[*] WVALID BREADY
+    ARADDR[*] ARPROT[*] ARVALID RREADY
+}]
+
+set_output_delay -clock HCLK -min 0.500 [get_ports {
+    HRDATA[*] HREADY HRESP[*]
+    AWADDR[*] AWPROT[*] AWVALID
+    WDATA[*] WSTRB[*] WVALID BREADY
+    ARADDR[*] ARPROT[*] ARVALID RREADY
+}]
+
+# -------------------------------------------------------
+# False paths — async reset doesn't need timing analysis
+# -------------------------------------------------------
+set_false_path -from [get_ports HRESETn]

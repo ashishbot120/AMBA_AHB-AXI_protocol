@@ -1,0 +1,1017 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HRDATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "HRDATA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "HREADY",
+					"strict" : false
+				},
+				{
+					"name" : "HRESP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[19]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[20]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[21]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[22]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[23]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[24]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[25]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[26]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[27]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[28]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[29]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[30]",
+					"strict" : false
+				},
+				{
+					"name" : "AWADDR[31]",
+					"strict" : false
+				},
+				{
+					"name" : "AWVALID",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "WDATA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "WSTRB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "WSTRB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "WSTRB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "WSTRB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "WVALID",
+					"strict" : false
+				},
+				{
+					"name" : "BREADY",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ARADDR[31]",
+					"strict" : false
+				},
+				{
+					"name" : "ARVALID",
+					"strict" : false
+				},
+				{
+					"name" : "RREADY",
+					"strict" : false
+				},
+				{
+					"name" : "HCLK",
+					"strict" : false
+				},
+				{
+					"name" : "HRESETn",
+					"strict" : false
+				},
+				{
+					"name" : "AWREADY",
+					"strict" : false
+				},
+				{
+					"name" : "WREADY",
+					"strict" : false
+				},
+				{
+					"name" : "BVALID",
+					"strict" : false
+				},
+				{
+					"name" : "ARREADY",
+					"strict" : false
+				},
+				{
+					"name" : "RVALID",
+					"strict" : false
+				},
+				{
+					"name" : "HWRITE",
+					"strict" : false
+				},
+				{
+					"name" : "HSEL",
+					"strict" : false
+				},
+				{
+					"name" : "HTRANS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "HWDATA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RRESP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BRESP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RRESP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "BRESP[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "RDATA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[19]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[20]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[21]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[22]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[23]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[24]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[25]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[26]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[27]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[28]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[29]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[30]",
+					"strict" : false
+				},
+				{
+					"name" : "HADDR[31]",
+					"strict" : false
+				},
+				{
+					"name" : "HSIZE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HSIZE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HSIZE[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

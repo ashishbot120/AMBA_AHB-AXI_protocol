@@ -23,14 +23,14 @@ module ahb_slave (
 );
 
 localparam IDLE   = 2'b00;
+localparam BUSY   = 2'b01;
 localparam NONSEQ = 2'b10;
 localparam SEQ    = 2'b11;
 localparam OKAY   = 2'b00;
 localparam ERROR  = 2'b01;
 
 reg error_second_cycle;
-reg pending;
-reg ahb_write_reg;
+reg busy;
 
 // -------------------------------------------------------
 // Address phase register
@@ -61,61 +61,53 @@ always @(posedge HCLK or negedge HRESETn) begin
 end
 
 // -------------------------------------------------------
-// Register write flag for HRDATA mux
-// -------------------------------------------------------
-always @(posedge HCLK or negedge HRESETn) begin
-    if (!HRESETn)
-        ahb_write_reg <= 1'b0;
-    else if (HREADY && HSEL && (HTRANS == NONSEQ || HTRANS == SEQ))
-        ahb_write_reg <= HWRITE;
-end
-
-// -------------------------------------------------------
-// Write data — combinational
+// Write data — combinational, valid in data phase
 // -------------------------------------------------------
 always @(*) begin
     ahb_wdata = HWDATA;
 end
 
 // -------------------------------------------------------
-// Pending flag — set on address phase, clear on fsm_ready
+// Busy flag — stays HIGH until fsm_ready
 // -------------------------------------------------------
 always @(posedge HCLK or negedge HRESETn) begin
     if (!HRESETn)
-        pending <= 1'b0;
+        busy <= 1'b0;
+    else if (ahb_valid)
+        busy <= 1'b1;
     else if (fsm_ready)
-        pending <= 1'b0;
-    else if (HREADY && HSEL &&
-             (HTRANS == NONSEQ || HTRANS == SEQ))
-        pending <= 1'b1;
+        busy <= 1'b0;
 end
 
 // -------------------------------------------------------
-// HREADY — LOW while pending, HIGH when done
+// HREADY
 // -------------------------------------------------------
 always @(posedge HCLK or negedge HRESETn) begin
     if (!HRESETn)
         HREADY <= 1'b1;
-    else if (fsm_ready)
-        HREADY <= 1'b1;
-    else if (pending)
+    else if (busy && !fsm_ready)
         HREADY <= 1'b0;
+    else if (fsm_ready)
+        HREADY <= 1'b1;
     else
         HREADY <= 1'b1;
 end
 
 // -------------------------------------------------------
-// HRDATA — combinational using registered write flag
+// HRDATA — registered, fsm_rdata is now combinational
+// so this captures valid data one cycle after S_COMPLETE
+// which is exactly when fsm_ready fires (S_ERROR/S_IDLE)
 // -------------------------------------------------------
-always @(*) begin
-    if (!ahb_write_reg)
-        HRDATA = fsm_rdata;
-    else
-        HRDATA = 32'b0;
+always @(posedge HCLK or negedge HRESETn) begin
+    if (!HRESETn)
+        HRDATA <= 32'b0;
+    else if (fsm_ready && !ahb_write)
+        HRDATA <= fsm_rdata;
 end
 
 // -------------------------------------------------------
-// HRESP — 2-cycle error sequence
+// HRESP — 2-cycle ERROR (fsm_error and fsm_ready now
+// arrive on separate cycles from FSM S_COMPLETE/S_ERROR)
 // -------------------------------------------------------
 always @(posedge HCLK or negedge HRESETn) begin
     if (!HRESETn) begin

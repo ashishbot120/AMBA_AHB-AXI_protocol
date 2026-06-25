@@ -59,3 +59,24 @@ desktop.ini
 # Python cache (if any scripts added later)
 __pycache__/
 *.pyc
+
+# Quartus generated files — do not commit
+quartus/db/
+quartus/incremental_db/
+quartus/output_files/*.sof
+quartus/output_files/*.pof
+quartus/output_files/*.jdi
+quartus/output_files/*.pin
+quartus/output_files/*.smsg
+quartus/output_files/*.fit.rpt
+quartus/output_files/*.map.rpt
+quartus/output_files/*.sta.rpt
+quartus/output_files/*.asm.rpt
+quartus/output_files/*.fit.summary
+quartus/output_files/*.map.summary
+quartus/output_files/*.sta.summary
+quartus/simulation/
+quartus/*.qws
+*.rpt
+*.smsg
+*.flock
